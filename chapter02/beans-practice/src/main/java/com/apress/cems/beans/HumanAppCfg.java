@@ -27,6 +27,7 @@ SOFTWARE.
 */
 package com.apress.cems.beans;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -35,6 +36,16 @@ import org.springframework.context.annotation.Configuration;
  * @since 1.0
  */
 @Configuration
-@ComponentScan(basePackages = {"com.apress.cems.beans"} )
+@ComponentScan(basePackages = {"com.apress.cems.beans"})
 public class HumanAppCfg {
+
+    @Bean
+    public String title() {
+        return "my book";
+    }
+
+    @Bean
+    public String title2() {
+        return "my book2";
+    }
 }
